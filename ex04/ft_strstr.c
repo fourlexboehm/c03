@@ -1,35 +1,34 @@
-/* A function that compares to strings and outputs true if they're identical
+/* A function that compares two strings and outputs true if they're identical
  * and false if they're different.
  */
-int    compare(char *X, char *Y)
+int	compare(char *X, char *Y)
 {
-    while (*X && *Y)
-    {
-        if (*X != *Y)
-        {
-            return (0);
-        }
-        X++;
-        Y++;
-    }
-	int result;
-	result =	*Y == '\0';
-    return(result);
+	while (*X && *Y)
+	{
+		if (*X != *Y)
+		{
+			return (0);
+		}
+		X++;
+		Y++;
+	}
+	return (*Y == '\0');
 }
+/* Finds to_find in str and returns str from that point till it's end */
 
-char    *ft_strstr(char    *str, char *to_find)
+char	*ft_strstr(char	*str, char *to_find)
 {
-    while (*str != '\0')
-    {
-        if ((*str == *to_find) && compare(str, to_find))
-        {
-            return str;
-        }
-        str++;
-    }
-    return ("\0");
+	while (*str != '\0')
+	{
+		if ((*str == *to_find) && compare(str, to_find))
+		{
+			return (str);
+		}
+		str++;
+	}
+	return ("\0");
 }
-
+/*
 #include <stdio.h>
 int    main(void)
 {
@@ -42,3 +41,4 @@ int    main(void)
 	printf("%d\n", compare("were the same", "were the same"));
     return (0);
 }
+*/
