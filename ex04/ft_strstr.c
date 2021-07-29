@@ -22,23 +22,32 @@ char	*ft_strstr(char	*str, char *to_find)
 	{
 		if ((*str == *to_find) && compare(str, to_find))
 		{
-			return (str);
+			return (str);	// In gdb> print str; expect result to be 3
 		}
 		str++;
 	}
 	return ("\0");
 }
-/*
 #include <stdio.h>
+#include <string.h>
 int    main(void)
 {
     char    str[] = "there is a needle in this haystack";
     char    to_find[] = "needle";
-
     printf("%s\n", ft_strstr(str, to_find));
-	printf("%d\n", compare("were the same", "were not same"));
+    printf("%s\n", strstr(str, to_find));
 
-	printf("%d\n", compare("were the same", "were the same"));
+    char    str2[] = "there ain't no needle in this haystack";
+    char    to_find2[] = "stack";
+    printf("%s\n", ft_strstr(str2, to_find2));
+    printf("%s\n", strstr(str2, to_find2));
+
+    char    str3[] = "there is a needle in this haystack\0";
+    char    to_find3[] = "need";
+    printf("%s\n", ft_strstr(str3, to_find3));
+    printf("%s\n", strstr(str3, to_find3));
+
+//	printf("%d\n", compare("were the same", "were not same"));
+//	printf("%d\n", compare("were the same", "were the same"));
     return (0);
 }
-*/
