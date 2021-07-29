@@ -28,6 +28,7 @@ char	*ft_strstr(char	*str, char *to_find)
 	}
 	return ("\0");
 }
+/*
 #include <stdio.h>
 #include <string.h>
 int    main(void)
@@ -51,3 +52,4 @@ int    main(void)
 //	printf("%d\n", compare("were the same", "were the same"));
     return (0);
 }
+*/
