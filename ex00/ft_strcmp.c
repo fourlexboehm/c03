@@ -7,7 +7,6 @@ int	ft_strcmp(char *s1, char *s2)
 		i++;
 	return (s1[i] - s2[i]);
 }
-/*
 #include <stdio.h>
 int	main(void)
 {
@@ -15,4 +14,3 @@ int	main(void)
 	char	s2[] = "19";
 	printf("%d", ft_strcmp(s1, s2)); 
 }
-*/
